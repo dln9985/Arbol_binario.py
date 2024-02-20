@@ -2,17 +2,30 @@ from lib import *
 
 print("")
 
-nodo1=nodo(2)
-nodo2=nodo(10)
-nodo3=nodo(5)
+inOrderArr = []
+PreOrderArr = []
+PostOrderArr = []
 
-nodo1.left = nodo3
-nodo1.right = nodo2
+nodo1=nodo(1)
+nodo2=nodo(2)
+nodo3=nodo(3)
+nodo4=nodo(4)
+nodo5=nodo(5)
+nodo6=nodo(6)
+nodo7=nodo(7)
 
-print(nodo1)
-print(nodo2)
-print(nodo3)
+linkHijo(nodo1, nodo2, nodo3)
+linkHijo(nodo2, nodo4, nodo5)
+linkHijo(nodo3, nodo6, nodo7)
+
+LVR(nodo1, inOrderArr)
+print(inOrderArr)
+
+VLR(nodo1, PreOrderArr)
+print(PreOrderArr)
+
+LRV(nodo1, PostOrderArr)
+print(PostOrderArr)
 
 print("") 
 
-#meew
