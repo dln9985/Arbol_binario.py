@@ -40,3 +40,17 @@ def LRV( Nodo, PostOrderArr ):
         PostOrderArr.append(nodoPadre.valor)
         
     return PostOrderArr
+
+def NodosOrdenados(nodoFather, newNodo):
+    if newNodo.valor < nodoFather.valor:
+        if nodoFather.left is None:
+            nodoFather.left = newNodo
+        else:
+            NodosOrdenados(nodoFather.left, newNodo)
+        
+    if newNodo.valor > nodoFather.valor:
+        if nodoFather.right is None:
+            nodoFather.right = newNodo
+        else:
+            NodosOrdenados(nodoFather.right, newNodo)  
+    pass

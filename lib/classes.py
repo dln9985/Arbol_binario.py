@@ -10,9 +10,12 @@ class nodo():
         strout = ""
         strout += f" NP[{self.valor}] "
         if type(self.left) != type(None):
-            strout += f" [{self.valor}]->[{self.left}] "
+            strout += f" Izq[{self.valor}]->[{self.left}] "
+            
         if self.right is not None:
-            strout += f" [{self.valor}]->[{self.right}] "
+            strout += f" Der[{self.valor}]->[{self.right}] "
+            
+        return strout
     
     def __str__(self): 
         return f"Valor: {self.valor}"
