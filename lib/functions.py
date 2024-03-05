@@ -54,3 +54,13 @@ def NodosOrdenados(nodoFather, newNodo):
         else:
             NodosOrdenados(nodoFather.right, newNodo)  
     pass
+
+def printThree( Nodo ):
+    if Nodo is not None:
+        nodoPadre = Nodo
+        
+        print(nodoPadre.getThree())
+        
+        printThree( nodoPadre.left)
+        
+        printThree( nodoPadre.right)

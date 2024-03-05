@@ -43,15 +43,6 @@ for i in range(0, len(arrNodos), 1):
         NodosOrdenados(nodoraiz, nodo(arrNodos[i]))
     pass
 
-def printThree( Nodo ):
-    if Nodo is not None:
-        nodoPadre = Nodo
-        
-        print(nodoPadre.getThree())
-        printThree( nodoPadre.left)
-        printThree( nodoPadre.right)
-
 printThree(nodoraiz)
-
 
 print("")
