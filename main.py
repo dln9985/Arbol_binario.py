@@ -1,34 +1,41 @@
 from lib import *
+import sys
 
 print("")
+
+arrayNum=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+nodoRaiz = nodo(arrayNum[0])
+
+for i in range(1, len(arrayNum), 1):
+    agregaNodos(nodoRaiz,arrayNum[i])
+    
+#for i in arrayNum:
+    #agregaNodos(nodoRaiz, i)
+    
+#j=1
+#while arrayNum:
+    #agregaNodos(nodoRaiz, arrayNum[j])
+    #j+=1
+    
+printThree(nodoRaiz)
 
 inOrderArr = []
 PreOrderArr = []
 PostOrderArr = []
 
-nodo1=nodo(1)
-nodo2=nodo(2)
-nodo3=nodo(3)
-nodo4=nodo(4)
-nodo5=nodo(5)
-nodo6=nodo(6)
-nodo7=nodo(7)
-
-linkHijo(nodo1, nodo2, nodo3)
-linkHijo(nodo2, nodo4, nodo5)
-linkHijo(nodo3, nodo6, nodo7)
-
-LVR(nodo1, inOrderArr)
+LVR(nodoRaiz, inOrderArr)
 print("In Order:", end=" ")
 print(inOrderArr)
 
-VLR(nodo1, PreOrderArr)
+VLR(nodoRaiz, PreOrderArr)
 print("PreOrder:", end=" ")
 print(PreOrderArr)
 
-LRV(nodo1, PostOrderArr)
+LRV(nodoRaiz, PostOrderArr)
 print("PostOrder:", end=" ")
 print(PostOrderArr)
+
+sys.exit("Fin del programa")
 
 print("---------------------------------------")
 print("") 

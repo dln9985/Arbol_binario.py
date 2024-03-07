@@ -1,3 +1,5 @@
+from .classes import *
+
 def linkHijo( nodoPadre, nodoHijoIz= None , nodoHIjoDer= None ):
     if nodoHijoIz is not None:
         nodoPadre.left = nodoHijoIz
@@ -64,3 +66,26 @@ def printThree( Nodo ):
         printThree( nodoPadre.left)
         
         printThree( nodoPadre.right)
+        
+def agregaNodos(currentNodo, nuevoNum):
+    cola=[]
+    cola.append(currentNodo)
+    
+    while cola:
+        currentNodo = cola.pop(0)
+        
+        if currentNodo.left is None:
+           currentNodo.left = nodo( nuevoNum )
+           return 0
+
+        if currentNodo.right is None:
+           currentNodo.right = nodo( nuevoNum )
+           return 0
+    
+        cola.append(currentNodo.left)
+        cola.append(currentNodo.right)
+        
+    return 0
+
+
+         
